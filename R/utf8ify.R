@@ -1,11 +1,12 @@
 ## utf8_text_bold()
 ## utf8_collection()
+## utf8_block(from, to)
 ## u$smileys|hands|animals|eatdrink|popular|
 
 
-# chr <- "⓪"
+# chr <- "❤️"
 # utf8ToInt(chr)
-# as.hexmode(utf8ToInt(chr))
+# as.hexmode(utf8ToInt("✔️"))
 # 
 # 
 # vec <- utf8ToInt("Creepy Alien - R Game")
@@ -75,97 +76,132 @@ as_utf8_text <- function(text, format = "b") {
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_bold("Hello World")
+#' utf8_text_bold("Hello World")
 #' @export
-as_utf8_text_bold <- function(text) { as_utf8_text(text, format = "b") }
+utf8_text_bold <- function(text) { as_utf8_text(text, format = "b") }
 
 #' Format text bold (serif) using unicode
 #'
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_bold2("Hello World")
+#' utf8_text_bold2("Hello World")
 #' @export
-as_utf8_text_bold2 <- function(text) { as_utf8_text(text, format = "b2") }
+utf8_text_bold2 <- function(text) { as_utf8_text(text, format = "b2") }
 
 #' Format text italic using unicode
 #'
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_italic("Hello World")
+#' utf8_text_italic("Hello World")
 #' @export
-as_utf8_text_italic <- function(text) { as_utf8_text(text, format = "i") }
+utf8_text_italic <- function(text) { as_utf8_text(text, format = "i") }
 
 #' Format text bold and italic using unicode
 #'
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_bolditalic("Hello World")
+#' utf8_text_bolditalic("Hello World")
 #' @export
-as_utf8_text_bolditalic <- function(text) { as_utf8_text(text, format = "bi") }
+utf8_text_bolditalic <- function(text) { as_utf8_text(text, format = "bi") }
 
 #' Format text cursive using unicode
 #'
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_cursive("Hello World")
+#' utf8_text_cursive("Hello World")
 #' @export
-as_utf8_text_cursive <- function(text) { as_utf8_text(text, format = "c") }
+utf8_text_cursive <- function(text) { as_utf8_text(text, format = "c") }
 
 #' Format text gothic using unicode
 #'
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_gothic("Hello World")
+#' utf8_text_gothic("Hello World")
 #' @export
-as_utf8_text_gothic <- function(text) { as_utf8_text(text, format = "g") }
+utf8_text_gothic <- function(text) { as_utf8_text(text, format = "g") }
 
 #' Format text circled using unicode
 #'
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' as_utf8_text_circled("Hello World")
+#' utf8_text_circled("Hello World")
 #' @export
-as_utf8_text_circled <- function(text) { as_utf8_text(text, format = "o") }
+utf8_text_circled <- function(text) { as_utf8_text(text, format = "o") }
 
 #as_utf8_number_roman(1)
 #as_utf8_number_box(1)
 
-utf8_arrow_right <- function(n = 1) { paste(rep("\U27A1", n), collapse = "") }
-utf8_arrow_left  <- function(n = 1) { paste(rep("\U2B05", n), collapse = "") }
-utf8_beer        <- function(n = 1) { paste(rep("\U1F37A", n), collapse = "") }
-utf8_bulb        <- function(n = 1) { paste(rep("\U1F4A1", n), collapse = "") }
-utf8_check       <- function(n = 1) { paste(rep("\U2705", n), collapse = "") }
-utf8_clapping    <- function(n = 1) { paste(rep("\U1F44F", n), collapse = "") }
-utf8_cross       <- function(n = 1) { paste(rep("\U274C", n), collapse = "") }
-utf8_email       <- function(n = 1) { paste(rep("\U1F4E7", n), collapse = "") }
-utf8_eyes        <- function(n = 1) { paste(rep("\U1F440", n), collapse = "") }
-utf8_face_happy  <- function(n = 1) { paste(rep("\U1F600", n), collapse = "") }
-utf8_face_sweat  <- function(n = 1) { paste(rep("\U1F605", n), collapse = "") }
-utf8_face_joy    <- function(n = 1) { paste(rep("\U1F602", n), collapse = "") }
-utf8_face_think  <- function(n = 1) { paste(rep("\U1F914", n), collapse = "") }
-utf8_face_ups    <- function(n = 1) { paste(rep("\U1F92D", n), collapse = "") }  
-utf8_face_zipper <- function(n = 1) { paste(rep("\U1F910", n), collapse = "") } 
-utf8_face_sunglasses <- function(n = 1) { paste(rep("\U1F60E", n), collapse = "") } 
-utf8_face_surprise <- function(n = 1) { paste(rep("\U1F62E", n), collapse = "") }
-utf8_finger_right <- function(n = 1) { paste(rep("\U1F449", n), collapse = "") }
-utf8_finger_left <- function(n = 1) { paste(rep("\U1F448", n), collapse = "") }
-utf8_heart      <- function(n = 1) { paste(rep("\U2665", n), collapse = "") }
-utf8_key        <- function(n = 1) { paste(rep("\U1F511", n), collapse = "") }
-utf8_money      <- function(n = 1) { paste(rep("\U1F4B0", n), collapse = "") }
-utf8_party      <- function(n = 1) { paste(rep("\U1F389", n), collapse = "") }
-utf8_poo        <- function(n = 1) { paste(rep("\U1F4A9", n), collapse = "") }
-utf8_rocket <- function(n = 1) { paste(rep("\U1F680", n), collapse = "") }
-utf8_speech <- function(n = 1) { paste(rep("\U1F4AC", n), collapse = "") }
-utf8_star <- function(n = 1) { paste(rep("\U2B50", n), collapse = "") }
-utf8_target <- function(n = 1) { paste(rep("\U1F3AF", n), collapse = "") }
-utf8_thanks <- function(n = 1) { paste(rep("\U1F64F", n), collapse = "") }
-utf8_thumbs_up   <- function(n = 1) { paste(rep("\U1F44D", n), collapse = "") }
-utf8_thumbs_down <- function(n = 1) { paste(rep("\U1F44E", n), collapse = "") }
-utf8_wink        <- function(n = 1) { paste(rep("\U1F44B", n), collapse = "") }
-utf8_100         <- function(n = 1) { paste(rep("\U1F4AF", n), collapse = "") }
+#' Collection of unicode symbols
+#'
+#' @param text A text (as string)
+#' @return Unicode text
+#' @examples
+#' utf8_collection()
+#' @export
+
+utf8_collection <- function() {
+  
+  result <- list(
+    popular = c(
+      arrow_right = "\U27A1", arrow_left = "\U2B05",
+      beer = "\U1F37A", bulb = "\U1F4A1", 
+      check = "\U2714\UFE0F", clapping = "\U1F44F", coffee = "\U2615", cross = "\U274C",
+      email = "\U1F4E7", eyes = "\U1F440", fire = "\U1F525",
+      point_right ="\U1F449", point_left = "\U1F448",
+      happy = "\U1F600", heart = "\U2764\UFE0F", joy = "\U1F602", key = "\U1F511",
+      money = "\U1F4B0", onehundret = "\U1F4AF", party = "\U1F389", poo = "\U1F4A9",
+      question = "\U2753",
+      surprise = "\U1F62E", sweat = "\U1F605", rocket = "\U1F680", speech = "\U1F4AC", 
+      star = "\U2B50", sunglasses = "\U1F60E",
+      target = "\U1F3AF", thanks = "\U1F64F", think = "\U1F914",
+      thumbs_up = "\U1F44D", thumbs_down = "\U1F44E", ups = "\U1F92D",
+      wink = "\U1F44B", zipper = "\U1F910"
+    ),
+    smiley = c(
+      happy = "\U1F600",
+      joy = "\U1F602",
+      sunglasses = "\U1F60E", 
+      surprise = "\U1F62E",
+      sweat = "\U1F605",
+      think = "\U1F914",
+      ups = "\U1F92D",  
+      zipper = "\U1F910"
+    )
+  ) 
+  
+  result
+  
+} # utf8_collection()
+
+utf8_collection
+
+#' Block from the UTF8 table
+#'
+#' @param from Hexcode starting
+#' @param to Hexcode end
+#' @return Vector of UTF8 characters
+#' @examples
+#' utf8_block(from ="0x1F600", to="0x1F64F")
+#' @export
+
+utf8_block <- function(from ="0x1F600", to="0x1F64F")  {
+
+  #from <- strtoi("0x3040")
+  #to <- strtoi("0x409F")
+  seq <- seq(from, to)
+  hex <- paste0("UTF8=0x", toupper(as.hexmode(seq)))
+  
+  result <- vector()
+  for (i in from:to) {
+    result <- c(result, intToUtf8(i))  
+  }
+  names(result) <- hex
+  result
+} # utf8_block
+
