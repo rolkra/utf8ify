@@ -4,7 +4,7 @@
 \alias{utf8_block}
 \title{Block from the UTF8 table}
 \usage{
-utf8_block(from = "0x1F600", to = "0x1F64F")
+utf8_block(from = "0x1F600", to = "0x1F64F", show_names = FALSE)
 }
 \arguments{
 \item{from}{Hexcode starting}

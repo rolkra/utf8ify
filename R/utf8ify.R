@@ -4,7 +4,7 @@
 ## u$smileys|hands|animals|eatdrink|popular|
 
 
-# chr <- "❤️"
+# chr <- "🏖"
 # utf8ToInt(chr)
 # as.hexmode(utf8ToInt("✔️"))
 # 
@@ -148,7 +148,7 @@ utf8_text_circled <- function(text) { as_utf8_text(text, format = "o") }
 utf8_collection <- function() {
   
   result <- list(
-    popular = c(
+    popular = list(
       arrow_right = "\U27A1", arrow_left = "\U2B05",
       beer = "\U1F37A", bulb = "\U1F4A1", 
       check = "\U2714\UFE0F", clapping = "\U1F44F", coffee = "\U2615", cross = "\U274C",
@@ -163,7 +163,7 @@ utf8_collection <- function() {
       thumbs_up = "\U1F44D", thumbs_down = "\U1F44E", ups = "\U1F92D",
       wink = "\U1F44B", zipper = "\U1F910"
     ),
-    smiley = c(
+    smiley = list(
       happy = "\U1F600",
       joy = "\U1F602",
       sunglasses = "\U1F60E", 
@@ -172,6 +172,59 @@ utf8_collection <- function() {
       think = "\U1F914",
       ups = "\U1F92D",  
       zipper = "\U1F910"
+    ),
+    person = list(
+      woman = "\U1F469",
+      man = "\U1F468",
+      girl = "\U1F467",
+      boy = "\U1F466",
+      couple_fm = "\U1F46B",
+      couple_mm = "\U1F46C",
+      couple_ff = "\U1F46D",
+      family = "\U1F46A",
+      older_woman = "\U1F475",
+      older_man = "\U1F474"
+    ),
+    celebrate = list(
+      present = "\U1F381",
+      cake = "\U1F382",
+      party_popper = "\U1F389",
+      balloon = "\U1F388",
+      pumpkin = "\U1F383",
+      xmas_tree = "\U1F384",
+      santa = "\U1F385",
+      fireworks = "\U1F386",
+      graduation = "\U1F393"
+    ),
+    animal = list(
+      bee = "\U1F41D",
+      bull = "\U1F402",
+      cat = "\U1F408",
+      cow = "\U1F404",
+      dog = "\U1F415",
+      dolphin = "\U1F42C",
+      fish = "\U1F41F",
+      horse = "\U1F40E",
+      monkey = "\U1F412",
+      pig = "\U1F416",
+      rat = "\U1F400",
+      rabbit = "\U1F407",
+      snake = "\U1F40C",
+      tiger = "\U1F405"
+    ),
+    clock = list(
+      clock_01 = "\U1F550",
+      clock_02 = "\U1F551",
+      clock_03 = "\U1F552",
+      clock_04 = "\U1F553",
+      clock_05 = "\U1F554",
+      clock_06 = "\U1F555",
+      clock_07 = "\U1F556",
+      clock_08 = "\U1F557",
+      clock_09 = "\U1F558",
+      clock_10 = "\U1F559",
+      clock_11 = "\U1F55A",
+      clock_12 = "\U1F55B"
     )
   ) 
   
@@ -190,18 +243,18 @@ utf8_collection
 #' utf8_block(from ="0x1F600", to="0x1F64F")
 #' @export
 
-utf8_block <- function(from ="0x1F600", to="0x1F64F")  {
+utf8_block <- function(from ="0x1F600", to="0x1F64F", show_names = FALSE)  {
 
   #from <- strtoi("0x3040")
   #to <- strtoi("0x409F")
   seq <- seq(from, to)
-  hex <- paste0("UTF8=0x", toupper(as.hexmode(seq)))
+  hex <- paste0("0x", toupper(as.hexmode(seq)))
   
   result <- vector()
   for (i in from:to) {
     result <- c(result, intToUtf8(i))  
   }
-  names(result) <- hex
+  if(show_names) { names(result) <- hex }
   result
 } # utf8_block
 
