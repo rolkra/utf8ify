@@ -148,7 +148,7 @@ utf8_text_circled <- function(text) { as_utf8_text(text, format = "o") }
 utf8_collection <- function() {
   
   result <- list(
-    popular = list(
+    fav = list(
       arrow_right = "\U27A1", arrow_left = "\U2B05",
       beer = "\U1F37A", bulb = "\U1F4A1", 
       check = "\U2714\UFE0F", clapping = "\U1F44F", coffee = "\U2615", cross = "\U274C",
@@ -163,27 +163,22 @@ utf8_collection <- function() {
       thumbs_up = "\U1F44D", thumbs_down = "\U1F44E", ups = "\U1F92D",
       wink = "\U1F44B", zipper = "\U1F910"
     ),
-    smiley = list(
-      happy = "\U1F600",
-      joy = "\U1F602",
-      sunglasses = "\U1F60E", 
-      surprise = "\U1F62E",
-      sweat = "\U1F605",
-      think = "\U1F914",
-      ups = "\U1F92D",  
-      zipper = "\U1F910"
-    ),
-    person = list(
-      woman = "\U1F469",
-      man = "\U1F468",
-      girl = "\U1F467",
-      boy = "\U1F466",
-      couple_fm = "\U1F46B",
-      couple_mm = "\U1F46C",
-      couple_ff = "\U1F46D",
-      family = "\U1F46A",
-      older_woman = "\U1F475",
-      older_man = "\U1F474"
+    animal = list(
+      bee = "\U1F41D",
+      bull = "\U1F402",
+      cat = "\U1F408",
+      cow = "\U1F404",
+      dog = "\U1F415",
+      dolphin = "\U1F42C",
+      fish = "\U1F41F",
+      horse = "\U1F40E",
+      llama = "\U1F999",
+      monkey = "\U1F412",
+      pig = "\U1F416",
+      rat = "\U1F400",
+      rabbit = "\U1F407",
+      snake = "\U1F40C",
+      tiger = "\U1F405"
     ),
     celebrate = list(
       present = "\U1F381",
@@ -195,22 +190,6 @@ utf8_collection <- function() {
       santa = "\U1F385",
       fireworks = "\U1F386",
       graduation = "\U1F393"
-    ),
-    animal = list(
-      bee = "\U1F41D",
-      bull = "\U1F402",
-      cat = "\U1F408",
-      cow = "\U1F404",
-      dog = "\U1F415",
-      dolphin = "\U1F42C",
-      fish = "\U1F41F",
-      horse = "\U1F40E",
-      monkey = "\U1F412",
-      pig = "\U1F416",
-      rat = "\U1F400",
-      rabbit = "\U1F407",
-      snake = "\U1F40C",
-      tiger = "\U1F405"
     ),
     clock = list(
       clock_01 = "\U1F550",
@@ -225,6 +204,90 @@ utf8_collection <- function() {
       clock_10 = "\U1F559",
       clock_11 = "\U1F55A",
       clock_12 = "\U1F55B"
+    ),
+    eat = list(
+      apple = "\U1F34F",
+      cake = "\U1F370",
+      cherry = "\U1F352",
+      cookie = "\U1F36A",
+      fries = "\U1F35F",
+      hamburger = "\U1F354",
+      lemon = "\U1F34B",
+      pizza = "\U1F355",
+      plate = "\U1F37D",
+      popcorn = "\U1F37F"
+    ),
+    drink = list(
+      beer = "\U1F37A",
+      beer2 = "\U1F37B",
+      bottle = "\U1F37E",
+      coffee = "\U2615",
+      cocktail = "\U1F378",
+      wine = "\U1F377"
+    ),
+    office = list(
+      calendar = "\U1F5D3",
+      chart_up = "\U1F4C8",
+      chart_down = "\U1F4C9",
+      desktop = "\U1F5A5",
+      folder = "\U1F4C2",
+      laptop = "\U1F4BB",
+      paperclip = "\U1F4CE",
+      page = "\U1F4C4",
+      pen = "\U1F58A",
+      printer = "\U1F5A8",
+      pushpin = "\U1F4CC",
+      pushpin2 = "\U1F4CD",
+      scissors = "\U2702",
+      trash = "\U1F5D1"
+    ),
+    person = list(
+      woman = "\U1F469",
+      man = "\U1F468",
+      girl = "\U1F467",
+      boy = "\U1F466",
+      couple_fm = "\U1F46B",
+      couple_mm = "\U1F46C",
+      couple_ff = "\U1F46D",
+      family = "\U1F46A",
+      older_woman = "\U1F475",
+      older_man = "\U1F474"
+    ),
+    smiley = list(
+      happy = "\U1F600",
+      joy = "\U1F602",
+      sunglasses = "\U1F60E", 
+      surprise = "\U1F62E",
+      sweat = "\U1F605",
+      think = "\U1F914",
+      ups = "\U1F92D",  
+      zipper = "\U1F910"
+    ),
+    sport = list(
+      basketball = "\U1F3C0",
+      boxing = "\U1F94A",
+      bicycling = "\U1F6B4",
+      foodball = "\U1F3C8",
+      medal = "\U1F3C5",
+      motorcycle = "\U1F3CD",
+      runner = "\U1F3C3",
+      surfer = "\U1F3C4",
+      tennis = "\U1F3BE",
+      trophy = "\U1F3C6"
+    ),
+    travel = list(
+      airplane = "\U2708",
+      bikycle = "\U1F6B2",
+      car = "\U1F697",
+      helicopter = "\U1F681",
+      luggage = "\U1F9F3",
+      metro = "\U1F687",
+      rocket = "\U1F680",
+      sailboat = "\U26F5",
+      scooter = "\U1F6F4",
+      ship = "\U1F6A2",
+      tractor = "\U1F69C",
+      train = "\U1F686"
     )
   ) 
   
