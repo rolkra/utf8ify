@@ -2,10 +2,11 @@
 
 export(utf8_block)
 export(utf8_collection)
+export(utf8_number_box)
 export(utf8_text_bold)
 export(utf8_text_bold2)
 export(utf8_text_bolditalic)
-export(utf8_text_circled)
+export(utf8_text_circle)
 export(utf8_text_cursive)
 export(utf8_text_gothic)
 export(utf8_text_italic)

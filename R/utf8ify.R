@@ -4,9 +4,9 @@
 ## u$smileys|hands|animals|eatdrink|popular|
 
 
-# chr <- "🏖"
+# chr <- "1️⃣"
 # utf8ToInt(chr)
-# as.hexmode(utf8ToInt("✔️"))
+# as.hexmode(utf8ToInt("1️⃣"))
 # 
 # 
 # vec <- utf8ToInt("Creepy Alien - R Game")
@@ -130,12 +130,46 @@ utf8_text_gothic <- function(text) { as_utf8_text(text, format = "g") }
 #' @param text A text (as string)
 #' @return Unicode text
 #' @examples
-#' utf8_text_circled("Hello World")
+#' utf8_text_circle("Hello World")
 #' @export
-utf8_text_circled <- function(text) { as_utf8_text(text, format = "o") }
+utf8_text_circle <- function(text) { as_utf8_text(text, format = "o") }
 
-#as_utf8_number_roman(1)
-#as_utf8_number_box(1)
+#' Format number boxed using unicode
+#'
+#' @param text A text (as string)
+#' @return Unicode text
+#' @examples
+#' utf8_number_box(123.45)
+#' @export
+
+utf8_number_box <- function(num) {
+
+  chr <- as.character(num)
+  result = vector("numeric")
+  
+  for (i in seq_len(nchar(chr))) {
+    
+    int <- substr(chr, i, i)
+    new <- int
+    
+    if (int == "0") { new <- "\U0030\UFE0F\U20E3" }
+    if (int == "1") { new <- "\U0031\UFE0F\U20E3" }  
+    if (int == "2") { new <- "\U0032\UFE0F\U20E3" }  
+    if (int == "3") { new <- "\U0033\UFE0F\U20E3" }  
+    if (int == "4") { new <- "\U0034\UFE0F\U20E3" }  
+    if (int == "5") { new <- "\U0035\UFE0F\U20E3" }  
+    if (int == "6") { new <- "\U0036\UFE0F\U20E3" }  
+    if (int == "7") { new <- "\U0037\UFE0F\U20E3" }  
+    if (int == "8") { new <- "\U0038\UFE0F\U20E3" }  
+    if (int == "9") { new <- "\U0039\UFE0F\U20E3" }  
+    
+    result <- c(result, new)
+    
+  }
+  
+  paste0(result, collapse = "")
+  
+} # as_utf8_number()
 
 #' Collection of unicode symbols
 #'
