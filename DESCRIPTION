@@ -6,7 +6,8 @@ Authors@R:
            family = "Krasser",
            role = c("aut", "cre"),
            email = "roland.krasser@gmail.com")
-Description: Format text using 'UTF-8'
+Description: Format text using 'UTF-8'. Use predefined emojis, format text as 
+    bold, italic and format numbers.
 License: MIT + file LICENSE
 Encoding: UTF-8
 URL: https://github.com/rolkra/utf8ify

@@ -7,7 +7,7 @@
 utf8_number_box(num)
 }
 \arguments{
-\item{text}{A text (as string)}
+\item{num}{Number}
 }
 \value{
 Unicode text

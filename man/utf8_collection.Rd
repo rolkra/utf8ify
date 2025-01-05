@@ -6,15 +6,20 @@
 \usage{
 utf8_collection()
 }
-\arguments{
-\item{text}{A text (as string)}
-}
 \value{
-Unicode text
+List of unicode collections
 }
 \description{
 Collection of unicode symbols
 }
 \examples{
+# show complete collection (as list)
 utf8_collection()
+
+# show fav collection 
+u <- utf8_collection()
+unlist(u$fav)
+
+# show single character
+u$fav$heart
 }

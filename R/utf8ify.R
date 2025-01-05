@@ -1,20 +1,20 @@
-## utf8_text_bold()
-## utf8_collection()
-## utf8_block(from, to)
-## u$smileys|hands|animals|eatdrink|popular|
+#' Inspect a Utf8 character
+#'
+#' @param chr A Utf8 character
+#' @return Prints infos int & hex
+#' @examples
+#' utf8_inspect("❤️")
+#' @export
 
-
-# chr <- "1️⃣"
-# utf8ToInt(chr)
-# as.hexmode(utf8ToInt("1️⃣"))
-# 
-# 
-# vec <- utf8ToInt("Creepy Alien - R Game")
-# vec <- utf8ToInt("ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789")
-# vec
-# cat(intToUtf8(vec))
-
-# run ---------------------------------------------------------------------
+utf8_inspect <- function(chr) {
+  
+  int <- utf8ToInt(chr)
+  hex <- as.hexmode(utf8ToInt(chr))
+  
+  cat("chr =", chr, "\n")
+  cat("int =", int, "\n")
+  cat("hex =", as.character(hex), "\n")
+}
 
 as_utf8_text <- function(text, format = "b") {
   
@@ -52,24 +52,6 @@ as_utf8_text <- function(text, format = "b") {
   #result
   intToUtf8(result)
 }
-
-# text <- "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789"
-# as_utf8_text(text, format = "s")
-# 
-# text <- "You can't format text in LinkedIn!"
-# cat(paste0("\n",
-#            text, "\n",  
-#            as_utf8_text(text, format = "b"), "\n",
-#            as_utf8_text(text, format = "b2"), "\n",
-#            as_utf8_text(text, format = "i"), "\n",
-#            as_utf8_text(text, format = "bi"), "\n",
-#            as_utf8_text(text, format = "c"), "\n",
-#            as_utf8_text(text, format = "g"), "\n",
-#            as_utf8_text(text, format = "o"), "\n",
-#            "\n... but you can use UTF8 characters!\n",
-#            utf8_face_sunglasses(),
-#            " and", as_utf8_text(" THIS ", format = "bi"), "is the trick!"
-# ))
 
 #' Format text bold (sans) using unicode
 #'
@@ -136,7 +118,7 @@ utf8_text_circle <- function(text) { as_utf8_text(text, format = "o") }
 
 #' Format number boxed using unicode
 #'
-#' @param text A text (as string)
+#' @param num Number
 #' @return Unicode text
 #' @examples
 #' utf8_number_box(123.45)
@@ -169,14 +151,21 @@ utf8_number_box <- function(num) {
   
   paste0(result, collapse = "")
   
-} # as_utf8_number()
+} # as_utf8_number_box()
 
 #' Collection of unicode symbols
 #'
-#' @param text A text (as string)
-#' @return Unicode text
+#' @return List of unicode collections
 #' @examples
+#' # show complete collection (as list)
 #' utf8_collection()
+#' 
+#' # show fav collection 
+#' u <- utf8_collection()
+#' unlist(u$fav)
+#' 
+#' # show single character
+#' u$fav$heart
 #' @export
 
 utf8_collection <- function() {
@@ -259,6 +248,21 @@ utf8_collection <- function() {
       cocktail = "\U1F378",
       wine = "\U1F377"
     ),
+    list = list(
+      arrow_right = "\U27A1",
+      circle = "\U25CB",
+      check = "\U2714\UFE0F",
+      check_box = "\U2705",
+      diamond = "\U25C6",
+      diamond_blue = "\U1F539",
+      diamond_orange = "\U1F538",
+      dot_black = "\U26AB",
+      dot_blue = "\U1F535",
+      dot_green = "\U1F7E2",
+      dot_orange = "\U1F7E0",
+      dot_red = "\U1F534",
+      dot_small = "\U25CF"
+    ),
     office = list(
       calendar = "\U1F5D3",
       chart_up = "\U1F4C8",
@@ -329,12 +333,11 @@ utf8_collection <- function() {
   
 } # utf8_collection()
 
-utf8_collection
-
 #' Block from the UTF8 table
 #'
 #' @param from Hexcode starting
 #' @param to Hexcode end
+#' @param show_names Show names of UTF8 characters (TRUE|FALSE)
 #' @return Vector of UTF8 characters
 #' @examples
 #' utf8_block(from ="0x1F600", to="0x1F64F")

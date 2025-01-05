@@ -2,6 +2,7 @@
 
 export(utf8_block)
 export(utf8_collection)
+export(utf8_inspect)
 export(utf8_number_box)
 export(utf8_text_bold)
 export(utf8_text_bold2)

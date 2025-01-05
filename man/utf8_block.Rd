@@ -10,6 +10,8 @@ utf8_block(from = "0x1F600", to = "0x1F64F", show_names = FALSE)
 \item{from}{Hexcode starting}
 
 \item{to}{Hexcode end}
+
+\item{show_names}{Show names of UTF8 characters (TRUE|FALSE)}
 }
 \value{
 Vector of UTF8 characters
