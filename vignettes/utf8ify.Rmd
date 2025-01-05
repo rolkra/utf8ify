@@ -1,0 +1,130 @@
+---
+title: "utf8ify"
+author: "Roland Krasser"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{utf8ify}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Format text
+
+Use `utf8_text_*()` functions to format text (using Utf8)
+
+```{r}
+library(utf8ify)
+text <- "\nHello World"
+
+cat(
+  text,
+  utf8_text_bold(text),
+  utf8_text_bold2(text),
+  utf8_text_italic(text),
+  utf8_text_bolditalic(text),
+  utf8_text_cursive(text),
+  utf8_text_gothic(text),
+  utf8_text_circle(text)
+)
+```
+Not all characters can be formatted. In this example the letter `ö`is not formatted bold (as there is no corresponding Utf8 bold character)
+
+```{r}
+utf8_text_bold("Heute ist ein schöner Tag")
+```
+
+# Format number
+
+```{r}
+utf8_number_box(123.45)
+```
+
+# Collection
+
+{utf8ify} comes with a collection of Utf8 symbols & emojis. They are structured as a list.
+
+```{r}
+u <- utf8_collection()
+```
+
+## fav (favorites)
+
+```{r}
+u$fav |> unlist()
+```
+
+## animal
+
+```{r}
+u$animal |> unlist()
+```
+
+## celebrate
+
+```{r}
+u$celebrate |> unlist()
+```
+
+## clock
+
+```{r}
+u$clock |> unlist()
+```
+
+## eat
+
+```{r}
+u$eat |> unlist()
+```
+
+## drink
+
+```{r}
+u$drink |> unlist()
+```
+
+## list
+
+```{r}
+u$list |> unlist()
+```
+
+## office
+
+```{r}
+u$office |> unlist()
+```
+
+## person
+
+```{r}
+u$person |> unlist()
+```
+
+
+# Block
+
+Use `utf8_block()` to show a complete Utf8 block:
+
+```{r}
+utf8_block(from = "0x1F600", to = "0x1F64F", show_names = FALSE)
+```
+
+```{r}
+utf8_block(from = "0x2600", to = "0x26FF", show_names = FALSE)
+```
+
+```{r}
+utf8_block(from = "0x16A0", to = "0x16F0", show_names = FALSE)
+```
+
+# Inspect
+
+If you found an Utf8 character on the internet, you can inspect it using `utf8_inspect()`
+
+```{r}
+utf8_inspect("❤️")
+```
+
+Here you can see, that this heard symbol is a combination of two Utf8 characters.
