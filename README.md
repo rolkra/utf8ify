@@ -16,7 +16,7 @@ With {utf8ify} you can easily...
 
 ```r
 library(utf8ify)
-text <- " format text\n"
+text <- " format text "
 cat(paste0(
   utf8_number_box(1), utf8_text_bold(text),
   utf8_number_box(2), utf8_text_bold2(text),
@@ -24,7 +24,7 @@ cat(paste0(
   utf8_number_box(4), utf8_text_bolditalic(text),
   utf8_number_box(5), utf8_text_cursive(text),
   utf8_number_box(6), utf8_text_gothic(text),
-  "... using UTF8 characters!\n",
+  "\n... using UTF8 characters!\n",
   utf8_collection()$fav$sunglasses,
   utf8_collection()$fav$rocket
 ))
