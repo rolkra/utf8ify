@@ -1,6 +1,4 @@
 # utf8ify
-Format Text Using Unicode:
-
 
 With {utf8ify} you can easily...
 
