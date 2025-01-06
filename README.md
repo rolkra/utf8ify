@@ -1,3 +1,5 @@
+<img src="inst/figures/hex_utf8ify.png" align="right" width="130" height="150"/>
+
 # utf8ify
 
 With {utf8ify} you can easily...
