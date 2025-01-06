@@ -10,6 +10,7 @@ With {utf8ify} you can easily...
 4️⃣ 𝒇𝒐𝒓𝒎𝒂𝒕 𝒕𝒆𝒙𝒕
 5️⃣ 𝓯𝓸𝓻𝓶𝓪𝓽 𝓽𝓮𝔁𝓽
 6️⃣ 𝖋𝖔𝖗𝖒𝖆𝖙 𝖙𝖊𝖝𝖙
+7️⃣ ⓕⓞⓡⓜⓐⓣ ⓣⓔⓧⓣ
 
 ... using UTF8 characters!
 😎 🚀
@@ -24,6 +25,7 @@ cat(paste0(
   utf8_number_box(4), utf8_text_bolditalic(text),
   utf8_number_box(5), utf8_text_cursive(text),
   utf8_number_box(6), utf8_text_gothic(text),
+  utf8_number_box(6), utf8_text_circle(text),
   "\n... using UTF8 characters!\n",
   utf8_collection()$fav$sunglasses,
   utf8_collection()$fav$rocket
