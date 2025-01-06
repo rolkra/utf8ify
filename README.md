@@ -25,7 +25,7 @@ cat(paste0(
   utf8_number_box(4), utf8_text_bolditalic(text),
   utf8_number_box(5), utf8_text_cursive(text),
   utf8_number_box(6), utf8_text_gothic(text),
-  utf8_number_box(6), utf8_text_circle(text),
+  utf8_number_box(7), utf8_text_circle(text),
   "\n... using UTF8 characters!\n",
   utf8_collection()$fav$sunglasses,
   utf8_collection()$fav$rocket
