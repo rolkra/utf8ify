@@ -16,5 +16,6 @@ Prints infos int & hex
 Inspect a Utf8 character
 }
 \examples{
-utf8_inspect("❤️")
+u <- utf8_collection()
+utf8_inspect(u$fav$heart)
 }

@@ -3,7 +3,8 @@
 #' @param chr A Utf8 character
 #' @return Prints infos int & hex
 #' @examples
-#' utf8_inspect("❤️")
+#' u <- utf8_collection()
+#' utf8_inspect(u$fav$heart)
 #' @export
 
 utf8_inspect <- function(chr) {
