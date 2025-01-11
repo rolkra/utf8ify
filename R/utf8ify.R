@@ -45,6 +45,9 @@ as_utf8_text <- function(text, format = "b") {
     if (int >= 65 & int <= 90 & format == "b") { new <- int + 120276 - 65 }
     if (int >= 97 & int <= 122 & format == "b") { new <- int + 120302 - 97 }
     if (int >= 48 & int <= 57 & format == "b") { new <- int + 120812 - 48 }
+    if (int >= 65 & int <= 90 & format == "m") { new <- int + 120432 - 65 }
+    if (int >= 97 & int <= 122 & format == "m") { new <- int + 120432 + 26 - 97 }
+    if (int >= 48 & int <= 57 & format == "m") { new <- int + 120822 - 48 }
     
     result <- c(result, new)
     
@@ -116,6 +119,15 @@ utf8_text_gothic <- function(text) { as_utf8_text(text, format = "g") }
 #' utf8_text_circle("Hello World")
 #' @export
 utf8_text_circle <- function(text) { as_utf8_text(text, format = "o") }
+
+#' Format text monospace using unicode
+#'
+#' @param text A text (as string)
+#' @return Unicode text
+#' @examples
+#' utf8_text_monospace("Hello World")
+#' @export
+utf8_text_monospace <- function(text) { as_utf8_text(text, format = "m") }
 
 #' Format number boxed using unicode
 #'
