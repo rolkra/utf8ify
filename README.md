@@ -9,7 +9,7 @@ With {utf8ify} you can easily...
 5️⃣ 𝓯𝓸𝓻𝓶𝓪𝓽 𝓽𝓮𝔁𝓽
 6️⃣ 𝖋𝖔𝖗𝖒𝖆𝖙 𝖙𝖊𝖝𝖙
 7️⃣ ⓕⓞⓡⓜⓐⓣ ⓣⓔⓧⓣ
-
+8️⃣ 𝚏𝚘𝚛𝚖𝚊𝚝 𝚝𝚎𝚡𝚝 𝚒𝚗 𝙻𝚒𝚗𝚔𝚎𝚍𝙸𝚗!
 ... using UTF8 characters!
 😎 🚀
 
@@ -24,6 +24,7 @@ cat(paste0(
   utf8_number_box(5), utf8_text_cursive(text),
   utf8_number_box(6), utf8_text_gothic(text),
   utf8_number_box(7), utf8_text_circle(text),
+  utf8_number_box(8), utf8_text_monospace(text),
   "\n... using UTF8 characters!\n",
   utf8_collection()$fav$sunglasses,
   utf8_collection()$fav$rocket
