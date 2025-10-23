@@ -27,6 +27,17 @@ as_utf8_text <- function(text, format = "b") {
     int <- vec[i]
     new <- vec[i]
     
+    add_dots <- FALSE
+    if (int %in% c(228, 246, 252, 196, 214, 220)) {
+      if (int == 228) {int <- 97}    # ä = a
+      if (int == 246) {int <- 111}   # ö = o
+      if (int == 252) {int <- 117}   # ü = u
+      if (int == 196) {int <- 65}    # Ä = A
+      if (int == 214) {int <- 79}    # Ö = O
+      if (int == 220) {int <- 85}    # Ü = U
+      add_dots <- TRUE               # add double dots on top
+    }
+    
     if (int >= 48 & int <= 57 & format == "b2") { new <- int + 120782 - 48 }
     if (int >= 65 & int <= 90 & format == "b2") { new <- int + 119808 - 65 }
     if (int >= 97 & int <= 122 & format == "b2") { new <- int + 119834 - 97 }
@@ -48,6 +59,8 @@ as_utf8_text <- function(text, format = "b") {
     if (int >= 65 & int <= 90 & format == "m") { new <- int + 120432 - 65 }
     if (int >= 97 & int <= 122 & format == "m") { new <- int + 120432 + 26 - 97 }
     if (int >= 48 & int <= 57 & format == "m") { new <- int + 120822 - 48 }
+    
+    if (add_dots) { new <- c(new, 776)}  ## adding double dots on top
     
     result <- c(result, new)
     
