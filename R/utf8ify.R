@@ -179,6 +179,25 @@ utf8_number_box <- function(num) {
   
 } # as_utf8_number_box()
 
+#' Format number as stars using unicode
+#'
+#' @param num Number
+#' @param max_num Maximum number
+#' @return Unicode text
+#' @examples
+#' utf8_number_box(123.45)
+#' @export
+
+utf8_number_star <- function(num = 5, max_num = 10)  {
+  
+  n <- round(num, 0)
+  if(n < 0)  { n <- 0 }
+  if(n > max_num) { n <- max_num}
+  
+  paste0(rep("\u2B50", n), collapse = "")
+  
+}
+
 #' Collection of unicode symbols
 #'
 #' @return List of unicode collections
