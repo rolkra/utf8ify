@@ -179,13 +179,28 @@ utf8_number_box <- function(num) {
   
 } # as_utf8_number_box()
 
+#' Format number circled using unicode
+#'
+#' @param num Number
+#' @return Unicode text
+#' @examples
+#' utf8_number_box(123.45)
+#' @export
+
+utf8_number_circle <- function(num) {
+  
+  utf8_text_circle(as.character(num))
+  
+} # as_utf8_number_circle()
+
+
 #' Format number as stars using unicode
 #'
 #' @param num Number
 #' @param max_num Maximum number
 #' @return Unicode text
 #' @examples
-#' utf8_number_box(123.45)
+#' utf8_number_star(123.45)
 #' @export
 
 utf8_number_star <- function(num = 5, max_num = 10)  {
@@ -195,6 +210,25 @@ utf8_number_star <- function(num = 5, max_num = 10)  {
   if(n > max_num) { n <- max_num}
   
   paste0(rep("\u2B50", n), collapse = "")
+  
+}
+
+#' Format number as hearts using unicode
+#'
+#' @param num Number
+#' @param max_num Maximum number
+#' @return Unicode text
+#' @examples
+#' utf8_number_heart(3)
+#' @export
+
+utf8_number_heart <- function(num = 5, max_num = 10)  {
+  
+  n <- round(num, 0)
+  if(n < 0)  { n <- 0 }
+  if(n > max_num) { n <- max_num}
+  
+  paste0(rep("\U2764\UFE0F", n), collapse = "")
   
 }
 
